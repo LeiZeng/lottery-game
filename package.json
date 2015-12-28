@@ -2,6 +2,9 @@
   "name": "lottery-game",
   "version": "1.0.0",
   "main": "gulpfile.js",
+  "script": {
+    "start": "gulp"
+  },
   "dependencies": {
     "bluebird": "*",
     "jquery": "1.11.*",
