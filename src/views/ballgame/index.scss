@@ -1,0 +1,66 @@
+
+@keyframes shaking {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate3d(0, 0, 0) rotate(20deg);
+  }
+  75% {
+    transform: translate3d(0, 0, 0) rotate(-20deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+body {
+  background: #A20000;
+}
+main {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+#stage {
+  z-index: 12;
+  width: 1200px;
+  height: 600px;
+}
+.canvas-container {
+  margin: 0 auto;
+}
+.forward,
+.backward {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 600px;
+  background-repeat: no-repeat;
+}
+.forward {
+  z-index: 11;
+  display: none;
+  width: 200px;
+  height: 300px;
+  left: 600px;
+  top: 260px;
+  background-size: 100% auto;
+  background-image: url(/assets/images/logo.png);
+  transform-origin: center 200px;
+  animation: shaking 2s linear infinite;
+
+  &.show {
+    display: block;
+  }
+}
+.backward {
+  z-index: 10;
+  width: 100%;
+  background-size: contain;
+  background-image: url(/assets/images/spring.png)
+}
+
+.forward,
+.backward {
+  background-position: center;
+}

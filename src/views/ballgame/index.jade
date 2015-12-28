@@ -1,0 +1,17 @@
+extend ../../components/base/layout
+
+block append styles
+  link(rel="stylesheet", href="/assets/css/ballgame.css")
+  
+block append scripts
+  script(src="/assets/js/fabric/fabric.js")
+  script(src="/assets/js/ballgame.js")
+  script.
+    total = 10;
+    group = 5;
+  
+block append content
+  main
+    div.backward
+    canvas#stage(width=1200 height=600)
+    div.forward
